@@ -16,3 +16,5 @@
 
 * [05-cpu-scheduling](./05-cpu-scheduling) : CPU 스케줄링
 
+* [06-process-synchronization](./06-process-synchronization) : 프로세스 동기화
+
