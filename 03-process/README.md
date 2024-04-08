@@ -1,4 +1,4 @@
-# [ 03-process ]
+# [ Process ]
 > 프로세스 개념  
 > 프로세스 상태  
 > 프로세스 문맥교환  
@@ -151,12 +151,12 @@
 
 ## 쓰레드 구현
 * Kernel Threads  
-		* some are support by kernel  
-		* Windows 95/98/NT, Solaris, Digital UNIX, Mach  
+	* some are support by kernel  
+	* Windows 95/98/NT, Solaris, Digital UNIX, Mach  
 
 * User Threads  
-		* others are support by library  
-		* POSIX Pthreads, Mach C-threads, Solaris threads  
+	* others are support by library  
+	* POSIX Pthreads, Mach C-threads, Solaris threads  
 
 * Some are real-time threads  
 
