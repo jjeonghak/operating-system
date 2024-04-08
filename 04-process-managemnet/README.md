@@ -1,4 +1,4 @@
-# [ 04-process-management ]
+# [ Process Management ]
 > 프로세스 생성 및 종료  
 > 프로세스 협력  
 > 프로세스 특성 분류  
