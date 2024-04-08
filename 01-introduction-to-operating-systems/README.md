@@ -1,4 +1,4 @@
-# [ 01-introduction-to-operating-systems ]
+# [ Introduction To Operating Systems ]
 > 운영체제란 무엇인가  
 > 운영체제의 목적  
 > 운영체제의 분류  
