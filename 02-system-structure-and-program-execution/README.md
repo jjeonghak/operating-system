@@ -1,4 +1,4 @@
-# [ 02-system-structure-and-program-execution ]
+# [ System Structure And Program Execution ]
 > 컴퓨터 시스템 구조  
 > 동기식 및 비동기식 입출력  
 > 시스템 콜  
