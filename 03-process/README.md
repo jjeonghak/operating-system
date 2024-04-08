@@ -8,12 +8,15 @@
 
 ## 프로세스 개념  
 * `Process is a program in execution`  
+
 * 프로세스 문맥(context)  
   * CPU 수행 상태를 나타내는 하드웨어 문맥  
     PC(Program Counter)  
     각종 Register  
+
   * 프로세스 주소 공간  
     code, data, stack  
+
   * 프로세스 관련 커널 자료구조  
     PCB(Process Control Block)  
     Kernel stack  
@@ -25,10 +28,15 @@
 
 ## 프로세스 상태
 1. `Running` - CPU를 잡고 instruction을 수행중인 상태  
+
 2. `Ready` - CPU를 기다리는 상태(메모리 등 다른 조건을 모두 만족)  
+
 3. `Blocked`(wait, sleep) - CPU를 주어도 instruction을 수행할 수 없는 상태, 자신이 요청한 event 만족시 ready  
+
 4. `Suspended`(stopped) - 외부적인 이유로 프로세스 수행이 정지된 상태, 디스크로 swap out, 외부에서 resume시 activce  
+
 5. `New` - 프로세스가 생성중인 상태  
+
 6. `Terminated` - 수행(execution)이 끝난 후 정리하는 상태
 
 <br>
@@ -55,6 +63,7 @@
 
 ## 문맥 교환(Context Switch)
 * CPU를 한 프로세스에서 다른 프로세스로 넘겨주는 과정  
+
 * CPU가 다른 프로세스에게 넘어갈 때 운영체제는 아래 과정 수행  
   * CPU를 내어주는 프로세스의 상태를 그 프로세스의 PCB에 저장  
   * CPU를 새롭게 얻는 프로세스의 상태를 PCB에서 읽어옴  
@@ -75,7 +84,9 @@
 
 ## 프로세스 스케줄링 큐
 1. Job Queue: 현재 시스템 내에 있는 모든 프로세스 집합  
+
 2. Ready Queue: 현재 메모리 내에 존재하며 CPU 제어권을 대기하는 프로세스 집합  
+
 3. Device Queues: I/O device 처리를 기다리는 프로세스 집합  
 
 <br>
@@ -103,6 +114,51 @@
 <br>
 
 <img src="https://github.com/jjeonghak/operating-system/blob/main/md-images/03-process-scheduling.png" width="500" height="400">
+
+<br>
+
+## 쓰레드(Thread)
+* A `thread`(or `lightweight process`) is a basic unit of CPU utilization  
+
+* 쓰레드 개별 구성(CPU 실행 단위)  
+  * program counter, register set, stack space  
+
+* 쓰레드 공유 부분(task)  
+  * code section, data section, OS resources  
+
+* 다중 스레드 구성 테스크 구조에서 하나의 서버 스레드가 blocked 상태인 동안에도 동일한 테스크 내의 다른 스레드가 running되어 빠른 처리 가능  
+
+* 동일한 일을 수행하는 다중 스레드가 협력하여 높은 처리율(`throughput`)과 성능 향상  
+
+* 스레드를 이용한 병렬성(멀티 CPU 환경)  
+
+<br>
+
+<img src="https://github.com/jjeonghak/operating-system/blob/main/md-images/03-thread.png" width="500" height="400">
+
+<br>
+
+## 쓰레드 장점
+1. Responsiveness - 작업을 분할하여 실행, 빠른 응답성  
+
+2. Resource Sharing - 동일한 작업을 별도의 프로세스로 실행할 경우 프로세스 별 자원 발생  
+
+3. Economy - 프로세스 생성보다 쓰레드 생성이 경제적  
+
+4. Utilization of MP Architectures - 멀티 CPU 환경에서 병렬 처리를 통한 빠른 실행  
+
+<br>
+
+## 쓰레드 구현
+* Kernel Threads  
+		* some are support by kernel  
+		* Windows 95/98/NT, Solaris, Digital UNIX, Mach  
+
+* User Threads  
+		* others are support by library  
+		* POSIX Pthreads, Mach C-threads, Solaris threads  
+
+* Some are real-time threads  
 
 <br>
 
