@@ -7,6 +7,10 @@
 
 ## 주요 디렉토리
 * [01-introduction-to-operating-systems](./01-introduction-to-operating-systems) : 운용체제 개념
+
 * [02-system-structure-and-program-execution](./02-system-structure-and-program-execution) : 컴퓨터 시스템 구조
+
 * [03-process](./03-process) : 프로세스 개념
+
+* [04-process-managemnet](./04-process-managemnet) : 프로세스 관리
 
