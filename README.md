@@ -20,6 +20,8 @@
 
 * [07-deadlock](./07-deadlock) : 교착상태
 
+* [08-memory-management](./08-memory-management) : 메모리 관리
+
 
 
 
